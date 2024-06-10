@@ -14,12 +14,12 @@ const carts = require('./Router/CartRouter');
 const JWT = require('jsonwebtoken');
 dotenv.config();
 const app = express();
-app.use(cors())
-// app.use(cors({
-//     origin: ["https://fragrances-client.vercel.app"],
-//     methods: ["GET", "POST", "PUT", "DELETE"],
-//     credentials: true
-// }));
+
+app.use(cors({
+    origin: ["https://fragrance-client.vercel.app"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
+}));
 mongoose.connect(process.env.MongoUrl, {
     useNewUrlParser: true,
     useUnifiedTopology: true
