@@ -25,7 +25,7 @@ app.use(cors({
 }));
 
 // Handle preflight requests for all routes
-app.options( cors("*"));
+app.options('*', cors());
 
 mongoose.connect(process.env.MongoUrl, {
     useNewUrlParser: true,
@@ -35,7 +35,6 @@ mongoose.connect(process.env.MongoUrl, {
 }).catch((err) => {
     console.error("Database connection error:", err);
 });
-
 
 app.use(express.json());
 
