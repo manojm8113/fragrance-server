@@ -16,7 +16,7 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-    origin: ["https://fragrance-client.vercel.app/"],
+    origin: "https://fragrance-client.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
