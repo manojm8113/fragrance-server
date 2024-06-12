@@ -14,7 +14,7 @@ const carts = require('./Router/CartRouter');
 const JWT = require('jsonwebtoken');
 dotenv.config();
 const app = express();
-app.use(cors())
+app.use(cors("*"))
 // Apply CORS middleware
 // app.use(cors({
 //     origin: "https://fragrance-client.vercel.app",
