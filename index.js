@@ -16,12 +16,12 @@ dotenv.config();
 const app = express();
 app.use(cors("*"))
 // Apply CORS middleware
-// app.use(cors({
-//     origin: "https://fragrance-client.vercel.app",
-//     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-//     allowedHeaders: ['Content-Type', 'Authorization'],
-//     credentials: true
-// }));
+app.use(cors({
+    origin: "https://fragrance-client.vercel.app",
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true
+}));
 
 // Handle preflight requests for all routes
 // app.options('*', cors());
